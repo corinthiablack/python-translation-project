@@ -197,7 +197,7 @@ def find_first_orf(sequence,
     # Read the docstring above for additional clues.
 
     ### Want empty string to qualify!
-    orf_pattern_str = r'AUG([AUGC]{3})*(UAA|UAG|UGA)'
+    orf_pattern_str = r'(' + r'|'.join(starts) + r')([AUGC]{3})*(' + r'|'.join(stops) + r')'
     ##########################################################################
 
     # Create the regular expression object
